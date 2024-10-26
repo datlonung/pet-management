@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href='/thucung/add-thucung'>Them Khoa</a> &nbsp;							
+    
+    <br><br>
+
+    <table width="80%" border="0" id="countries">
+
+      <tr style='text-align:left; background-color:#CCC'>
+        <th id="name">Ten thu cung</th>
+        <th id="tld">So tuoi</th>
+        <th id="tld">can nang</th>
+        <th id="tld">chieu cao</th>
+        <th id="tld">Id</th>
+        <th>Action</th>
+      </tr>
+      <% if (thucungs) { %>
+      <% thucungs.forEach(function(thucungItem){ %>
+        <tr>
+          <td id="name"><%= thucungItem.tenthucung %></td>
+          <td id="tld"><%= thucungItem.sotuoi %></td>
+          <td id="tld"><%= thucungItem.chieucao %></td>
+          <td id="tld"><%= thucungItem.canang %></td>
+          <td id="id"><%= thucungItem._id %></td>
+          <td>
+            <div style="float:left">
+              <a href='/thucung/update-thucung/<%= thucungItem._id %>'>Edit</a>
+            </div>
+          </td>
+        </tr>
+      <% }) %>
+      <% } %>
+
+    </table>
+  </body>
+</html>

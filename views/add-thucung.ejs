@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    
+    <br><br>
+
+    <form action="/thucung/api/add" method="post" name="form1">
+      <table width="25%" border="0" id="countries">
+        <tr> 
+          <td>Ten thu cung</td>
+          <td><input type="text" name="tenthucung" id="tenthucung" value="<%= tenthucung %>" /></td>
+        </tr>
+        <tr> 
+          <td>So tuoi</td>
+          <td><input type="text" name="sotuoi" id="sotuoi" value="<%= sotuoi %>" /></td>
+        </tr>
+        <tr> 
+          <td>Can nang </td>
+          <td><input type="text" name="canang" id="canang" value="<%= canang %>" /></td>
+        </tr>
+        <tr> 
+          <td>Chieu cao </td>
+          <td><input type="text" name="chieucao" id="chieucao" value="<%= chieucao %>" /></td>
+        </tr>
+        <tr> 
+          <td></td>
+          <td><input type="submit" name="Submit" value="Add" /></td>
+        </tr>
+      </table>
+    </form>
+
+  </body>
+</html>
